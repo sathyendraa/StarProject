@@ -192,7 +192,7 @@ viewsparkDF=transObj.mask(viewsparkDF,confObj.view_mask_cols)
 
 actsparkDF = transObj.lookup_dataset(actsparkDF,confObj.lookup_location,confObj.pii_cols,datasetName)
 
-#The transformed data is ingested to the Staging Zone after Partitioning   
+#The transformed data is ingested to the Staging Zone after Partitioning
 actsparkDF=transObj.partitionWrite(actsparkDF,confObj.act_partition_cols,confObj.act_stag_dest)
 viewsparkDF=transObj.partitionWrite(viewsparkDF,confObj.view_partition_cols,confObj.view_stag_dest)
 
