@@ -186,7 +186,7 @@ viewsparkDF=transObj.readData(confObj.view_raw_dest)
 actsparkDF=transObj.typeCast(actsparkDF,confObj.act_trans_cols)
 viewsparkDF=transObj.typeCast(viewsparkDF,confObj.view_trans_cols)
 
-#Masking is performed on the dataset 
+#Masking is performed on the dataset
 actsparkDF=transObj.mask(actsparkDF,confObj.act_mask_cols)
 viewsparkDF=transObj.mask(viewsparkDF,confObj.view_mask_cols)
 
